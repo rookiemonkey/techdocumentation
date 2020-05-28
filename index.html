@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <title>Responsive Website</title>
+</head>
+<body>
+
+    <nav id="navbar">
+        <header><strong>Responsive Website</strong></header> 
+        <ul>
+            <li><a href="#Introduction" class="nav-link"><div>Introduction</div></a></li>
+            <li><a href="#CSS_Units" class="nav-link"><div>CSS Units</div></a></li>
+            <li><a href="#CSS_Grid" class="nav-link"><div>CSS Grid</div></a></li>
+            <li><a href="#CSS_Flexbox" class="nav-link"><div>CSS Flexbox</div></a></li>
+            <li><a href="#CSS_Media_Query" class="nav-link"><div>CSS Media Query</div></a></li>
+            <li><a href="#Bootstrap" class="nav-link"><div>Bootstrap</div></a></li>
+            <li><a href="#Resources" class="nav-link"><div>Resources</div></a></li>
+        </ul>
+    </nav>
+
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header></br>
+            <p>Today, there are many types of devices that can access the web. They range from large desktop computers to small mobile phones. These devices have different screen sizes, resolutions, and processing power.</p></br>
+            
+            <p> Web Design is an approach to designing web content that responds to the constraints of different devices. The page structure and CSS rules should be flexible to accommodate these differences. In general, design the page's CSS to your target audience. If you expect most of your traffic to be from mobile users, take a 'mobile-first' approach. Then add conditional rules for larger screen sizes. If your visitors are desktop users, then design for larger screens with conditional rules for smaller sizes. CSS gives you the tools/rules to write different style rules, then apply them depending on the device displaying the page. This section will cover the basic ways to use CSS for Responsive Web Design.</p></br>
+
+            <cite>Source: <a href="https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-principles/" target="_blank"><div>FCC's Responsive Website Introduction</div></a></cite>
+        </section>
+
+        <section class="main-section" id="CSS_Units">
+            <header>CSS Units</header></br>
+            <p>CSS has several different units for expressing a length. Many CSS properties take "length" values, such as width, margin, padding, font-size, etc.</p></br>
+            
+            <p><i>Length</i> is a number followed by a length unit, such as 10px, 2em, etc. A whitespace cannot appear between the number and the unit. However, if the value is 0, the unit can be omitted. For some CSS properties, negative lengths are allowed.</p></br>
+                
+            <p>There are two types of length units: <strong>absolute</strong> and <strong>relative</strong>.</p></br>
+
+            <h3>Absolute Lengths</h3>
+
+            <p>The absolute length units are fixed and a length expressed in any of these will appear as exactly that size. Absolute length units are not recommended for use on screen, because screen sizes vary so much. However, they can be used if the output medium is known, such as for print layout.</p></br>
+
+            <div id="cssUnitsContainer">
+                <table class="cssUnits">
+                  <tbody><tr> <!--headers-->
+                    <th>Unit</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                  </tr>
+                  <tr> <!--cm-->
+                    <td>cm</td>
+                    <td>centimeters</td>
+                    <td><a target="_blank" href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_unit_cm"><span>Try it</span></a></td>
+                  </tr>
+                    <tr> <!--mm-->
+                    <td>mm</td>
+                    <td>millimeters</td>
+                    <td><a target="_blank" href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_unit_mm"><span>Try it</span></a></td>
+                    </tr>
+                  <tr> <!--inch-->
+                    <td>in</td>
+                    <td>inches (1in = 96px = 2.54cm)</td>
+                    <td><a target="_blank" href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_unit_in"><span>Try it</span></a></td>
+                  </tr>
+                    <tr> <!--px-->
+                    <td>px *</td>
+                    <td>pixels (1px = 1/96th of 1in)</td>
+                    <td><a target="_blank" href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_unit_px"><span>Try it</span></a></td>
+                    </tr>
+                  <tr> <!--pt-->
+                    <td>pt</td>
+                    <td>points (1pt = 1/72 of 1in)</td>
+                    <td><a target="_blank" href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_unit_ptt"><span>Try it</span></a></td>
+                  </tr>
+                  <tr> <!--picas-->
+                    <td>pc</td>
+                    <td>picas (1pc = 12 pt)</td>
+                    <td><a target="_blank" ref="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_unit_pc"><span>Try it</span></a></td>
+                  </tr>
+                </tbody></table>
+                </div>
+
+        </section>
+
+        <section class="main-section" id="CSS_Grid">
+            <header>CSS Grid</header></br>
+            <p>The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning.</p></br>
+
+            <h3>Grid Parent Properties</h3>
+            <p><strong>display.</strong> An HTML element becomes a grid container when its display property is set to grid or inline-grid.</p>
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_display_grid" target="_blank"><span>Try it</span></a>&nbsp &nbsp.grid-container {display: grid;}</code></br>
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_display_inline-grid" target="_blank"><span>Try it</span></a>&nbsp &nbsp.grid-container {display: inline-grid;}</code>
+
+            </br>
+            </br>
+            <p>You can adjust the gap size by using one of the following properties: <strong>grid-column-gap</strong>&nbsp<strong>grid-row-gap</strong>&nbsp & &nbsp<strong>grid-gap</strong></br></p>
+            
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_grid-column-gap" target="_blank"><span>Try it</span></a>&nbsp &nbsp.grid-container {display: grid;grid-column-gap: 50px;}</code></br>
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_grid-row-gap" target="_blank"><span>Try it</span></a>&nbsp &nbsp.grid-container {display: grid;grid-row-gap: 50px;}</code></br>
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_grid-gap2" target="_blank"><span>Try it</span></a>&nbsp &nbsp.grid-container {display: grid;grid-gap: 50px 100px;}</code></br>
+
+            </br>
+            <p><strong>grid-template-columns.</strong> The grid-template-columns property defines the number of columns in your grid layout, and it can define the width of each column. The value is a space-separated-list, where each value defines the length of the respective column. If you want your grid layout to contain 4 columns, specify the width of the 4 columns, or "auto" if all columns should have the same width.</p>
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_grid-template-columns1" target="_blank"><span>Try it</span></a>&nbsp &nbsp.grid-container {display: grid;grid-template-columns: auto auto auto auto;}</code></br>
+
+            </br>
+            <p><strong>grid-template-row.</strong> This property defines the height of each row the same idea for grid-template columns for the number of rows.The value is a space-separated-list, where each value defines the height of the respective row:</p>
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_grid-template-rows" target="_blank"><span>Try it</span></a>&nbsp &nbsp.grid-container {display: grid;grid-template-rows: 80px 200px;}</code></br>
+            
+            </br>
+            <p><strong>justify-content.</strong> The justify-content property is used to align the whole grid inside the container.The grid's total width has to be less than the container's width for the justify-content property to have any effect.</p>
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_justify-content_space-evenly" target="_blank"><span>Try it</span></a>&nbsp &nbsp.grid-container {display: grid;justify-content: space-evenly;}</code></br>
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_justify-content_space-around" target="_blank"><span>Try it</span></a>&nbsp &nbsp.grid-container {display: grid;justify-content:space-around;}</code></br>
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_justify-content_space-between" target="_blank"><span>Try it</span></a>&nbsp &nbsp..grid-container {display: grid;justify-content: space-between;}</code></br>
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_justify-content_center" target="_blank"><span>Try it</span></a>&nbsp &nbsp.grid-container {display: grid;justify-content: center;}</code></br>
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_justify-content_start" target="_blank"><span>Try it</span></a>&nbsp &nbsp.grid-container {display: grid;justify-content: start;}</code></br>
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_justify-content_end" target="_blank"><span>Try it</span></a>&nbsp &nbsp.grid-container {display: grid;justify-content: end;}</code></br>
+
+            </br>
+            <p><strong>align-content.</strong> The align-content property is used to vertically align the whole grid inside the container. Note: The grid's total height has to be less than the container's height for the align-content property to have any effect.</p>
+
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_align-content_center" target="_blank"><span>Try it</span></a>&nbsp &nbsp.grid-container {display: grid;height: 400px;align-content: center;}</code></br>
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_align-content_space-evenly" target="_blank"><span>Try it</span></a>&nbsp &nbsp.grid-container {display: grid;height: 400px;align-content: space-evenly;}</code></br>
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_align-content_space-around" target="_blank"><span>Try it</span></a>&nbsp &nbsp.grid-container {display: grid;height: 400px;align-content: space-around;}</code></br>
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_align-content_space-between" target="_blank"><span>Try it</span></a>&nbsp &nbsp.grid-container {display: grid;height: 400px;align-content: space-between;}</code></br>
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_align-content_start" target="_blank"><span>Try it</span></a>&nbsp &nbsp.grid-container {display: grid;height: 400px;align-content: start;}</code></br>
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_align-content_end" target="_blank"><span>Try it</span></a>&nbsp &nbsp.grid-container { display: grid;height: 400px;align-content: end;}</code></br>
+
+            </br>
+            <h3>Grid Child(item) Properties</h3>
+            <p>A grid container contains grid items.By default, a container has one grid item for each column, in each row, but you can style the grid items so that they will span multiple columns and/or rows.</p>
+
+            <br>
+            <p><strong>grid-column.</strong> The property defines on which column(s) to place an item. You define where the item will start, and where the item will end. The grid-column property is a shorthand property for the grid-column-start and the grid-column-end properties. To place an item, you can refer to line numbers, or use the keyword "span" to define how many columns the item will span.</p>
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_grid-column_line" target="_blank"><span>Try it</span></a>&nbsp &nbsp.item1 {grid-column: 1 / 5;}</code></br>
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_grid-column" target="_blank"><span>Try it</span></a>&nbsp &nbsp.item1 {grid-column: 1 / span 3;}</code></br>
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_grid-column2" target="_blank"><span>Try it</span></a>&nbsp &nbsp.item2 {grid-column: 2 / span 3;}</code></br>
+
+            <br>
+            <p><strong>grid-row.</strong> The grid-row property defines on which row to place an item. You define where the item will start, and where the item will end. Note: The grid-row property is a shorthand property for the grid-row-start and the grid-row-end properties. To place an item, you can refer to line numbers, or use the keyword "span" to define how many rows the item will span:</p>
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_grid-row1" target="_blank"><span>Try it</span></a>&nbsp &nbsp.item1 {grid-row: 1 / 4;}</code></br>
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_grid-row2" target="_blank"><span>Try it</span></a>&nbsp &nbsp.item1 {grid-row: 1 / span 2;}</code></br>
+
+            <br>
+            <p><strong>grid-area.</strong> The grid-area property can be used as a shorthand property for the grid-row-start, grid-column-start, grid-row-end and the grid-column-end properties.</p>
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_grid-area1" target="_blank"><span>Try it</span></a>&nbsp &nbsp.item8 {grid-area: 1 / 2 / 5 / 6;}</code></br>
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_grid-area2" target="_blank"><span>Try it</span></a>&nbsp &nbsp.item8 {grid-area: 2 / 1 / span 2 / span 3;}</code></br>
+        </section>
+
+        <section class="main-section" id="CSS_Flexbox">
+            <header>CSS Flexbox</header></br>
+            <p>The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning.</p></br>
+
+            <h3>Flexbox Parent Properties</h3>
+            <p>to start using the Flexbox model, you need to first define a flex container. The element below represents a flex container (the blue area upon checking the example) with three flex items</p>
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox" target="_blank"><span>Try it</span></a>&nbsp &nbsp &lt;div class="flex-container"&gt;
+                &lt;div&gt;1&lt;/div&gt;
+                &lt;div&gt;2&lt;/div&gt;
+                &lt;div&gt;3&lt;/div&gt;
+                &lt;/div&gt;</code></br>
+            
+            </br>
+            <p><strong>display.</strong> The flex container becomes flexible by setting the display property to flex:</p>
+            <code><a href="" target="_blank"><span>Try it</span></a>&nbsp &nbsp.flex-container {display: flex;}</code></br>
+
+            </br>
+            <p><strong>flex-flow.</strong> The flex-flow property is a shorthand property for setting both the flex-direction and flex-wrap properties. (see <a href="https://www.w3schools.com/cssref/css3_pr_flex-direction.asp">flex-direction</a> and <a href="https://www.w3schools.com/cssref/css3_pr_flex-wrap.asp">flex-wrap</a>)</p>
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_flex-flow_row_wrap" target="_blank"><span>Try it</span></a>&nbsp &nbsp.flex-container {display: flex;flex-flow: row wrap;}</code></br>
+            
+            </br>
+            <p><strong>justify-content.</strong> The justify-content property is used to align the flex items: .
+
+            <p>The center value aligns the flex items at the center of the container:</p>
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_justify-content_center" target="_blank"><span>Try it</span></a>&nbsp &nbsp.flex-container {display: flex;justify-content: center;}</code></br>
+            
+            </br>
+            <p>The flex-start value aligns the flex items at the beginning of the container (this is default):</p>
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_justify-content_flex-start" target="_blank"><span>Try it</span></a>&nbsp &nbsp.flex-container {display: flex;justify-content: flex-start;}</code></br>
+
+            </br>
+            <p>The flex-end value aligns the flex items at the end of the container:</p>
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_justify-content_flex-end" target="_blank"><span>Try it</span></a>&nbsp &nbsp.flex-container {display: flex;justify-content: flex-end;}</code></br>
+
+            </br>
+            <p>The space-around value displays the flex items with space before, between, and after the lines:</p>
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_justify-content_space-around" target="_blank"><span>Try it</span></a>&nbsp &nbsp.flex-container {display: flex;justify-content: space-around;}</code></br>
+
+            </br>
+            <p>The space-between value displays the flex items with space between the lines:</p>
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_justify-content_space-between" target="_blank"><span>Try it</span></a>&nbsp &nbsp.flex-container {display: flex;justify-content: space-between;}</code></br>
+
+            </br>
+            <p><strong>align-items.</strong> The align-items property is used to align the flex items vertically.</p>
+            <p>The center value aligns the flex items in the middle of the container:</p>
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_align-items_center" target="_blank"><span>Try it</span></a>&nbsp &nbsp.flex-container {display: flex;height: 200px;align-items: center;}</code></br>
+    
+            </br>
+            <p>The flex-start value aligns the flex items at the top of the container:</p>
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_align-items_flex-start" target="_blank"><span>Try it</span></a>&nbsp &nbsp.flex-container {display: flex;height: 200px;align-items: flex-start;}</code></br>
+    
+            </br>
+            <p>The flex-end value aligns the flex items at the bottom of the container:</p>
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_align-items_flex-end" target="_blank"><span>Try it</span></a>&nbsp &nbsp.flex-container {display: flex;height: 200px;align-items: flex-end;}</code></br>
+            
+            </br>
+            <p>The stretch value stretches the flex items to fill the container (this is default):</p>
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_align-items_stretch" target="_blank"><span>Try it</span></a>&nbsp &nbsp.flex-container {display: flex;height: 200px;align-items: stretch;}</code></br>
+            
+            </br>
+            <p>The baseline value aligns the flex items such as their baselines aligns:</p>
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_align-items_baseline" target="_blank"><span>Try it</span></a>&nbsp &nbsp.flex-container {display: flex;height: 200px;align-items: baseline;}</code></br>
+            
+            </br>
+            <p><strong>align-content.</strong> The align-content property is used to align the flex lines. Vlues is the same as the as the align items.</p>
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_align-content_space-between" target="_blank"><span>Try it</span></a>&nbsp &nbsp.flex-container {display: flex;height: 600px;flex-wrap: wrap;align-content: space-between;}</code></br>
+
+            </br>
+            <h3>Flex Child(item) Properties</h3>
+            <p>The direct child elements of a flex container automatically becomes flexible (flex) items.</p>
+            
+            </br>
+            <p><strong>flex.</strong> The flex property is a shorthand property for the <a href="https://www.w3schools.com/cssref/css3_pr_flex-grow.asp">flex-grow</a>, <a href="https://www.w3schools.com/cssref/css3_pr_flex-shrink.asp">flex-shrink</a>, and <a href="https://www.w3schools.com/cssref/css3_pr_flex-basis.asp">flex-basis</a> properties.</p>
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_flex" target="_blank"><span>Try it</span></a>&nbsp &nbsp.flexItem1 {flex: 0 0 200px;}</code></br>
+
+            </br>
+            <p><strong>align-self.</strong> The align-self property specifies the alignment for the selected item inside the flexible container. The align-self property overrides the default alignment set by the container's align-items property.</p>
+            <code><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_align-self_center" target="_blank"><span>Try it</span></a>&nbsp &nbsp.flexItem1 {"align-self: center";}</code></br>
+        </section>
+
+        <section class="main-section" id="CSS_Media_Query">
+            <header>CSS Media Query</header></br>
+            <p>The @media rule, introduced in CSS2, made it possible to define different style rules for different media types.</p></br>
+                
+            <p>Examples: You could have one set of style rules for computer screens, one for printers, one for handheld devices, one for television-type devices, and so on.</p></br>
+                
+            <p>Unfortunately these media types never got a lot of support by devices, other than the print media type.</p></br>
+
+            <p>Let us look at some more examples of using media queries by pressing the code playground on the right. <a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_mediaqueries_flex" target="_blank"><span>Try it</span></a></br></p>
+        </section>
+
+        <section class="main-section" id="Bootstrap">
+            <header>Bootstrap</header></br>
+            <p>Bootstrap 4 is the newest version of Bootstrap, which is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first websites.</p>
+            
+            </br>
+            <h3>Why Use Bootstrap?</h3>
+            <ul>
+                <li>Easy to use: Anybody with just basic knowledge of HTML and CSS can start using Bootstrap</li>
+                <li>Responsive features: Bootstrap's responsive CSS adjusts to phones, tablets, and desktops</li>
+                <li>Mobile-first approach: In Bootstrap, mobile-first styles are part of the core framework</li>
+                <li>Browser compatibility: Bootstrap 4 is compatible with all modern browsers (Chrome, Firefox, Internet Explorer 10+, Edge, Safari, and Opera)</li>
+            </ul>
+
+            </br>
+            <h3>Where to Get Bootstrap 4?</h3>
+            <ul>
+                <li>Include Bootstrap 4 from a CDN</li>
+                <li>Download Bootstrap 4 from <a href="https://getbootstrap.com/" target="_blank">getbootstrap.com</a></li>
+            </ul>
+
+            </br>
+            <p>you can learn bootstrap from <a href="https://www.freecodecamp.org/" target="_blank">freecodecamp.org</a></p>
+        </section>
+
+        <section class="main-section" id="Resources">
+            <header>Resources</header></br>
+            <a href="https://www.freecodecamp.org/learn" target="_blank"> <div><img src="https://www.w3schools.com/favicon.ico"> &nbsp &nbsp w3schools.com</div></a>
+            <a href="https://www.w3schools.com/default.asp" target="_blank"><div><img src="https://www.freecodecamp.org/icons/icon-48x48.png?v=bf35f84ec919f18c70edcef4c694119c"> &nbsp &nbsp freecodecamp.org</div></a>
+        </section>
+    </main>
+</body>
+</html>
+
+

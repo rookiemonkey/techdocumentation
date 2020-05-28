@@ -1,0 +1,359 @@
+/* 
+CHALLENGES:
+when width gets smaller, you can scroll from left to right, elements goes under the nav-bar
+*/
+
+* {
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+    line-height: 25px;
+}
+
+/* side bar starts here */
+
+#navbar {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background-color: #247AC2 ;
+    color: white;
+}
+
+#navbar header {
+    position: relative;
+    background-color: #034174 ;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 20px;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: white;
+    transition: background-color;
+    transition-duration: 2000ms;
+}
+
+#navbar ul li {
+    font-size: 1em;
+    list-style-type: none;
+    text-align: center;
+    height: 50px;
+    padding: 13px 10px 10px 10px;
+    transition: background-color;
+    transition-duration: 600ms;
+}
+
+#navbar ul li a:hover{
+    background-color: #034174;
+}
+
+#navbar ul li:hover{
+    background-color: #034174;
+}
+
+/* this is how I did the full transition of colors. transition was applied both the a tag and the li tag that holds the whole box */
+/* whole box is clickable not only the text this is because i encolsed the text for the a tag into another div */
+
+@media only screen and (max-width: 900px) {
+    #navbar {
+        position: relative;
+        display: flex;
+        flex-flow: row wrap;
+        height: 125px;
+        width: auto;
+        overflow-y: scroll;
+        overflow-x: none;
+    }
+
+    #navbar::-webkit-scrollbar {
+        width: 10px;
+        background-color: #05508F ;
+    }
+
+    #navbar::-webkit-scrollbar-thumb {
+        width: 10px;
+        background-color: #023056 ;
+    }
+
+    #navbar::-webkit-scrollbar-corner {
+        display: none;
+    }
+
+    #navbar header {
+        width: 100%;
+    }
+
+    #navbar ul {
+        width: 100%;
+    }
+
+    #navbar ul li {
+    }
+  }
+
+/* side bar ends here */
+/* sections starts here */
+
+#main-doc {
+    position: absolute;
+    width: 77vw;
+    height: auto; 
+    padding: 40px;
+    margin-left: 300px;
+}
+
+#main-doc section header {
+    color: #034174;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+#main-doc section h3 {
+    color: #0869BA;
+    margin-left: 50px;
+    font-style: italic;
+}
+
+#main-doc section p {
+    margin-left: 50px;
+}
+
+/* introduction section */
+#Introduction {
+    margin-bottom: 50px;
+}
+
+#main-doc section p {
+    text-align: justify;
+}
+
+#main-doc section a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #034174;
+
+}
+
+#main-doc section cite {
+    text-align: right;
+}
+
+#main-doc section cite a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #034174;
+    transition-property: color;
+    transition-duration: 250ms;
+}
+
+#main-doc section cite a div {
+    width: max-content;
+    padding: 3px 5px 3px 5px;
+    transition-property: background-color;
+    transition-duration: 250ms;
+}
+
+#main-doc section cite a:hover {
+    color: white;
+}
+
+#main-doc section cite a div:hover {
+    background-color:#023056;
+    border-radius: 14px;
+}
+
+/* introduction section ends here */
+/* CSS_Units starts here */
+
+
+/* CSS_Units section */
+#CSS_Units {
+    margin-bottom: 50px;
+}
+
+#cssUnitsContainer table {
+    border: 2px solid black;
+    border-collapse: collapse;
+    margin-left: 50px;
+    width: 95%;
+    text-align: left;
+
+}
+
+#cssUnitsContainer tr td {
+    border-bottom: 1px solid black;
+    padding: 5px 5px 5px 15px;
+}
+
+#cssUnitsContainer tr td:last-child {
+    text-align: center;
+}
+
+#cssUnitsContainer tr th {
+    border-bottom: 1px solid black;
+    padding: 5px 5px 5px 15px;
+}
+
+#cssUnitsContainer tr th:last-child {
+    text-align: center;
+}
+
+#cssUnitsContainer tr:nth-child(even) {
+    background-color:  rgba(  8,105,186,0.5);
+    font-weight: bold;
+    color: #034174;
+}
+
+
+#cssUnitsContainer table tbody tr a {
+    transition-property: color;
+    transition-duration: 50ms;
+}
+
+#cssUnitsContainer table tbody tr a span {
+    width: max-content;
+    padding: 7px;
+    transition-property: background-color padding-top padding-bottom border-radius;
+    transition-duration: 500ms;
+}
+
+#cssUnitsContainer table tbody tr a:hover {
+    color: white;
+}
+
+#cssUnitsContainer table tbody tr a span:hover {
+    background-color:#023056;
+}
+
+/* CSS_Units section ends here */
+/* CSS_Grid section starts  here */
+
+#CSS_Grid {
+    margin-bottom: 50px;
+}
+
+#main-doc section code {
+    margin: 100px;
+    font-size: 12px;
+    font-family: 'Courier Prime', monospace;
+}
+
+#main-doc section code span {
+    transition-property: color background-color scale font-size padding;
+    transition-duration: 500ms;
+}
+
+#main-doc section code span:hover {
+    color: white;
+    background-color: #023056;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 7px;
+}
+
+/* CSS_Grid section ends here */
+/* CSS_Flexbox starts  here */
+
+#CSS_Flexbox {
+    margin-bottom: 50px;
+}
+
+/* CSS_Flexbox section ends here */
+/* CSS_Media_Query starts  here */
+
+#CSS_Media_Query {
+    margin-bottom: 50px;
+}
+
+#CSS_Media_Query p a {
+    transition-property: color;
+    transition-duration: 250ms;
+}
+
+#CSS_Media_Query p a:hover {
+    color: white;
+}
+
+#CSS_Media_Query p a span {
+    transition-property: color background-color scale font-size padding;
+    transition-duration: 500ms;
+}
+
+#CSS_Media_Query p a span:hover {
+    color: white;
+    background-color: #023056;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 7px;
+}
+
+/* CSS_Media_Query section ends here */
+/* Bootstrap starts  here */
+
+#Bootstrap {
+    margin-bottom: 50px;
+}
+
+#Bootstrap ul li {
+    margin-left: 100px;
+}
+
+/* Bootstrap section ends here */
+/* Resources starts  here */
+
+#Resources a img {
+    width: 20px;
+    height: 20px;
+}
+
+#Resources a div {
+    width: 200px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    transition-property: padding background-color font-size border-radius color; 
+    transition-duration: 500ms;
+}
+
+#Resources a {
+    transition-property: color;
+    transition-duration: 250ms;
+}
+
+#Resources a div:hover {
+    background-color: #023056;
+    border-radius: 7px;
+    color: white;
+}
+
+@media only screen and (max-width: 900px) {
+    * code {
+        font-size: 13px;
+    }
+
+    #main-doc {
+        margin: 0px;
+        padding: 15px;
+        width: auto;
+    }
+
+    #main-doc section p {
+        margin: 0px;
+    }
+
+    #main-doc section h3  {
+        margin: 0px;
+    }
+
+    #cssUnitsContainer table {
+        margin: 0px;
+    }
+
+    #main-doc section code {
+        margin: 0px;
+    }
+}
