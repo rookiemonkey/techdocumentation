@@ -1,0 +1,24 @@
+{
+  "name": "technicaldocumentation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rookiemonkey/techdocumentation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rookiemonkey/techdocumentation/issues"
+  },
+  "homepage": "https://github.com/rookiemonkey/techdocumentation#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "minify": "^6.0.0",
+    "ncp": "^2.0.0"
+  }
+}
