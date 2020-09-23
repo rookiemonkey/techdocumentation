@@ -54,7 +54,8 @@ const outputDir_image = `${outputDir_main}${outputDir_sub}/images`;
  *  *]
  */
 const assets = [
-    [`${path.join(__dirname, './index.html')}`, '/index', 'html']
+    [`${path.join(__dirname, './index.html')}`, '/index', 'html'],
+    [`${path.join(__dirname, './assets/css/style.css')}`, '/style', 'css']
 ]
 
 
